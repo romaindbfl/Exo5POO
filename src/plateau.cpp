@@ -45,7 +45,7 @@ bool Plateau::estCaseVide(int x, int y) const {
 }
 
 void Plateau::retirerPiece(int x, int y) {
-    delete cases[x][y]; // Libère la mémoire de la pièce
+
     cases[x][y] = nullptr; // Réinitialise la case à nullptr
 }
 

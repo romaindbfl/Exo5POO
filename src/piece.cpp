@@ -1,7 +1,7 @@
 // Piece.cpp
 #include "header/piece.hpp"
 
-Piece::Piece(char symbole, bool estBlanc) : symbole(symbole), estBlanc(estBlanc) {}
+Piece::Piece(char symbole, bool blanc) : symbole(symbole), blanc(blanc) {}
 
     // Getter pour le symbole de la pièce
     char Piece::getSymbole() const {
@@ -10,10 +10,8 @@ Piece::Piece(char symbole, bool estBlanc) : symbole(symbole), estBlanc(estBlanc)
 
     // Getter pour la couleur de la pièce
     bool Piece::estPieceBlanche() const {
-        return estBlanc;
+        return blanc;
     }
 
 
-bool Piece::estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY) const {
-    return true; //retourne toujours vrai pour l'instant
-}
+

@@ -1,8 +1,11 @@
-// Incluez les en-têtes nécessaires
+#ifndef JEU_HPP
+#define JEU_HPP
 
 #include "plateau.hpp"
 #include "joueur.hpp"
+#include "piece.hpp"
 #include "dame.hpp"
+#include "pion.hpp"
 
 class Jeu {
 private:
@@ -26,11 +29,9 @@ public:
     Joueur* getJoueur2() { return &joueur2; }
 
 private:
-    // Vérifie si le déplacement est valide
-    bool estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY) const;
 
-    // Vérifie si le joueur peut déplacer une pièce dans le plateau
-    bool peutDeplacer(const Joueur& joueur) const;
 
 
 };
+
+#endif

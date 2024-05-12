@@ -7,10 +7,10 @@
 class Pion : public Piece {
 public:
     Pion(char symbole, bool estBlanc);
-    bool estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY) const;
+    bool estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY, string& raisonInvalide) const override;
 
     bool estPieceBlanche() const override {
-        return estBlanc;
+        return blanc;
     }
 };
 
