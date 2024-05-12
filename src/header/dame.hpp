@@ -7,7 +7,7 @@
 
 class Dame : public Piece {
 public:
-    Dame(char symbole, bool estBlanc);
+    Dame(char symbole, bool blanc);
 
    bool estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY, string& raisonInvalide) const override;
     bool estPieceBlanche() const override {

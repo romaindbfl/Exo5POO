@@ -13,5 +13,3 @@ Piece::Piece(char symbole, bool blanc) : symbole(symbole), blanc(blanc) {}
         return blanc;
     }
 
-
-

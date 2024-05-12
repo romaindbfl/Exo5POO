@@ -28,8 +28,6 @@ public:
     Joueur* getJoueur1() { return &joueur1; }
     Joueur* getJoueur2() { return &joueur2; }
 
-private:
-
 
 
 };
