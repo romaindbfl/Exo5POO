@@ -64,3 +64,24 @@ void Plateau::afficherPlateau() const {
         cout << endl;
     }
 }
+
+void Plateau::capturePiece(int ligne, int colonne) const{
+    // Supprimer la pièce à la position spécifiée en la remplaçant par un pointeur nul
+    cases[ligne][colonne] = nullptr;
+}
+
+bool Plateau::conditionVictoire(Joueur* joueur) const {
+    // Parcourir toutes les cases du plateau
+    for (int i = 0; i < TAILLE; ++i) {
+        for (int j = 0; j < TAILLE; ++j) {
+            // Vérifier si la case contient une pièce du joueur spécifié
+            Piece* piece = obtenirPiece(i, j);
+            if (piece != nullptr && piece->estPieceBlanche() == joueur->estBlanc()) {
+                // Le joueur a au moins une pièce sur le plateau, donc il n'a pas perdu
+                return false;
+            }
+        }
+    }
+    // Si aucun pion ou dame du joueur n'est trouvé sur le plateau, le joueur a perdu
+    return true;
+}

@@ -2,6 +2,7 @@
 #define PLATEAU_HPP
 
 #include "pion.hpp"
+#include "dame.hpp"
 #include "case.hpp"
 #include "joueur.hpp"
 #include <vector>
@@ -12,7 +13,8 @@ class Pion;
 
 class Plateau {
 private:
-    vector<vector<Piece*>> cases; // Matrice représentant les cases du plateau
+    mutable vector<vector<Piece*>> cases; // Déclarez cases comme mutable
+    Piece* pieces[8][8]; // Déclaration de la variable membre pieces
 
 public:
 static const int TAILLE = 8; // Taille du plateau de jeu
@@ -30,6 +32,8 @@ static const int TAILLE = 8; // Taille du plateau de jeu
     bool estCaseVide(int x, int y) const;
     void retirerPiece(int x, int y);
     void afficherPlateau() const;
+    void capturePiece(int ligne, int colonne) const;
+    bool conditionVictoire(Joueur* joueur) const;
 };
 
 #endif // PLATEAU_HPP
