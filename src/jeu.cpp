@@ -2,7 +2,7 @@
 #include <iostream>
 
 // Constructeur de la classe Jeu
-Jeu::Jeu() : joueur1("NomJoueur1", 'W'), joueur2("NomJoueur2", 'B'), joueurCourant(&joueur1) {}
+Jeu::Jeu() : joueur1("Joueur1", 'W'), joueur2("Joueur2", 'B'), joueurCourant(&joueur1) {}
 
 // Fonction pour démarrer une partie
 void Jeu::demarrerPartie() {
@@ -17,11 +17,10 @@ bool Jeu::deplacerPiece(int departX, int departY, int arriveeX, int arriveeY) {
     // Déclarer une variable pour stocker la raison invalide
     string raisonInvalide;
     
-    // Vérifier si le déplacement est valide
-    if (!piece->estDeplacementValide(departX, departY, arriveeX, arriveeY, raisonInvalide)) {
-        cout << "Déplacement invalide ! Raison : " << raisonInvalide << endl; // Affichage de la raison invalide
-        return false;
-    }
+    if (!piece->estDeplacementValide(departX, departY, arriveeX, arriveeY, plateau, raisonInvalide)) {
+    cout << "Déplacement invalide ! Raison : " << raisonInvalide << endl; // Affichage de la raison invalide
+    return false;
+}
 
     // Obtenir la pièce à déplacer
     Piece* pieceADeplacer = plateau.obtenirPiece(departX, departY);
@@ -48,8 +47,6 @@ bool Jeu::deplacerPiece(int departX, int departY, int arriveeX, int arriveeY) {
 
     return true;
 }
-
-
 
 // Accesseur pour obtenir le plateau
 const Plateau& Jeu::getPlateau() const {

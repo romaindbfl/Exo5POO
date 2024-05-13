@@ -24,9 +24,12 @@ public:
 
     // Effectue le déplacement d'une pièce sur le plateau
     bool deplacerPiece(int departX, int departY, int arriveeX, int arriveeY);
+        // Méthode pour manger une pièce
+    //bool mangerPiece(int departX, int departY, int arriveeX, int arriveeY);
 
     Joueur* getJoueur1() { return &joueur1; }
     Joueur* getJoueur2() { return &joueur2; }
+    
 
 
 

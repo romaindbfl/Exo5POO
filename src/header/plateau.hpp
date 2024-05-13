@@ -1,13 +1,14 @@
-// Plateau.hpp
 #ifndef PLATEAU_HPP
 #define PLATEAU_HPP
 
+#include "pion.hpp"
 #include "case.hpp"
 #include "joueur.hpp"
-#include "piece.hpp"
-#include "pion.hpp"
 #include <vector>
 #include <iostream>
+
+class Piece;
+class Pion; 
 
 class Plateau {
 private:

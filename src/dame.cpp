@@ -1,9 +1,12 @@
   #include "header/dame.hpp"
 
-  Dame::Dame(char symbole, bool estBlanc) : Piece(symbole, estBlanc) {}
+  Dame::Dame(char symbole, bool blanc) : Piece(symbole, blanc) {}
 
-bool Dame::estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY, string& raisonInvalide) const {
-  Plateau plateau; 
+   bool Dame::estPieceBlanche() const {
+        return blanc;
+    }
+
+bool Dame::estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY, const Plateau& plateau, string& raisonInvalide) const {
     // Vérifier si le déplacement est sur une diagonale
     if (abs(arriveeX - departX) == abs(arriveeY - departY)) {
         // Vérifier si le chemin entre le départ et l'arrivée est libre
