@@ -16,7 +16,7 @@ bool Jeu::deplacerPiece(int departX, int departY, int arriveeX, int arriveeY)
     // Obtenir la pièce à déplacer
     Piece *piece = plateau.obtenirPiece(departX, departY);
 
-    // Déclarer une variable pour stocker la raison invalide afin de rendre le jeu plus compréhensible pour l'user
+    // Déclarer une variable pour stocker la raison invalide afin de rendre le jeu plus compréhensible pour l'utilisateur
     string raisonInvalide;
 
     if (!piece->estDeplacementValide(departX, departY, arriveeX, arriveeY, plateau, raisonInvalide))
@@ -32,9 +32,9 @@ bool Jeu::deplacerPiece(int departX, int departY, int arriveeX, int arriveeY)
     plateau.placerPiece(pieceADeplacer, arriveeX, arriveeY);
     plateau.retirerPiece(departX, departY);
 
-    // Promotion des pions s'ils atteignent la dernière rangée ou la paroi noire
+    // Promotion des pions s'ils atteignent la dernière rangée ou la paroi noire ou blanche
     if ((arriveeY == Plateau::TAILLE - 1 && pieceADeplacer->getSymbole() == 'O') ||
-        (arriveeY == 0 && pieceADeplacer->getSymbole() == 'X') ||
+        (arriveeX == 0 && pieceADeplacer->getSymbole() == 'X') ||
         (arriveeX == Plateau::TAILLE - 1 && pieceADeplacer->getSymbole() == 'O'))
     {
         // Promotion du pion en dame
