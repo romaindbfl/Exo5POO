@@ -1,10 +1,10 @@
 #ifndef PION_HPP
 #define PION_HPP
 
-#include "piece.hpp" 
-#include "plateau.hpp" 
+#include "piece.hpp"
+#include "plateau.hpp"
 
-class Plateau; 
+class Plateau;
 
 class Pion : public Piece
 {
@@ -13,7 +13,6 @@ public:
     bool estDeplacementValide(int departX, int departY, int arriveeX, int arriveeY, const Plateau &plateau, string &raisonInvalide) const override;
 
     bool estPieceBlanche() const override;
-    
 };
 
 #endif // PION_HPP

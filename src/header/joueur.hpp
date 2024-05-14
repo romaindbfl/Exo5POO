@@ -4,14 +4,15 @@
 #include <string>
 using namespace std;
 
-class Joueur {
+class Joueur
+{
 private:
     string nom;
     char symbole; // Symbole utilisé pour représenter les pions du joueur sur le plateau
 
 public:
-    Joueur(const string& nom, char symbole); // Ajoutez le constructeur ici
-    Joueur() = default; // Constructeur par défaut
+    Joueur(const string &nom, char symbole); 
+    Joueur() = default;                      // Constructeur par défaut
     // Getter pour le nom du joueur
     string getNom() const;
 

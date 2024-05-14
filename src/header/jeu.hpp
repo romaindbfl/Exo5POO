@@ -7,31 +7,27 @@
 #include "dame.hpp"
 #include "pion.hpp"
 
-class Jeu {
+class Jeu
+{
 private:
     Plateau plateau;
     Joueur joueur1;
     Joueur joueur2;
-    Joueur* joueurCourant;
+    Joueur *joueurCourant;
 
 public:
-    Jeu(); // Ajoutez le constructeur ici
+    Jeu(); 
 
     // Démarre une nouvelle partie
     void demarrerPartie();
 
-     const Plateau& getPlateau() const;
+    const Plateau &getPlateau() const;
 
     // Effectue le déplacement d'une pièce sur le plateau
     bool deplacerPiece(int departX, int departY, int arriveeX, int arriveeY);
-        
 
-    Joueur* getJoueur1() { return &joueur1; }
-    Joueur* getJoueur2() { return &joueur2; }
-    
-
-
-
+    Joueur *getJoueur1() { return &joueur1; }
+    Joueur *getJoueur2() { return &joueur2; }
 };
 
 #endif

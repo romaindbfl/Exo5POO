@@ -3,9 +3,10 @@
 
 #include "piece.hpp"
 
-class Case {
+class Case 
+{
 private:
-    Piece* piece; // Pointeur vers la pièce sur cette case
+    Piece *piece; // Pointeur vers la pièce sur cette case
 
 public:
     Case();
@@ -14,10 +15,10 @@ public:
     bool estVide() const;
 
     // Obtenir la pièce sur cette case
-    Piece* obtenirPiece() const;
+    Piece *obtenirPiece() const;
 
     // Placer une pièce sur cette case
-    void placerPiece(Piece* nouvellePiece);
+    void placerPiece(Piece *nouvellePiece);
 
     // Supprimer la pièce de cette case
     void retirerPiece();

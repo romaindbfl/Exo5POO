@@ -1,0 +1,7 @@
+Regle du jeu de dame,
+
+- Pour effectuer un déplacement x y, rentrer les coordonnées initiale du pion (ex : 2 1), puis les coordonnées d'arrivé sur le plateau (ex : 3 2)
+
+/!\ Les coordonnées d'entrées se font de la manière suivante : Ligne Colonne
+
+- Pour effectuer une capture x y, rentrer les coordonnées initiale du pion (ex : 3 2), puis les coordonnées d'arrivé sur le plateau correspondant au saut en diagonale sur le pion capturé (donc la case de capture +1 en diagonale)

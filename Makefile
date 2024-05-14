@@ -13,7 +13,7 @@ SRCS += $(SRCDIR)/main.cpp
 OBJS = $(patsubst $(SRCDIR)/%.cpp,$(BINDIR)/%.o,$(SRCS))
 
 # Nom de l'exécutable
-EXECUTABLE = test
+EXECUTABLE = Exercice5
 
 # Règle de construction de l'exécutable
 $(EXECUTABLE): $(OBJS)
